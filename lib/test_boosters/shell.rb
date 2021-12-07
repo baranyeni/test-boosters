@@ -8,9 +8,7 @@ module TestBoosters
 
       puts command unless options[:silent] == true
 
-      with_clean_env do
-        system(command)
-      end
+      system(command)
 
       signaled    = $?.signaled?
       termsig     = $?.termsig
