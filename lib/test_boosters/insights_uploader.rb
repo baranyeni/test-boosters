@@ -3,7 +3,7 @@ module TestBoosters
     module_function
 
     def upload(booster_type, file)
-      return unless File.exist?(file)
+      return true
 
       cmd = "http POST '#{insights_url}' #{booster_type}:=@#{file}"
 
